@@ -67,6 +67,11 @@ grep -v "bin" /etc/passwd
 
 -v: This option tells grep to invert the match, meaning it will display all lines that do not match the specified pattern.
 
+ex 18 letters only
+grep '^[a-zA-Z]' /etc/ssh/sshd_config
+
+'^[a-zA-Z]': This is the regular expression used to match lines starting with a letter.
+
 
 
 
