@@ -62,6 +62,11 @@ grep -A 3 "root" /etc/passwd
 
 -A 3: This option tells grep to display 3 lines of trailing context after each
 
+ex 17 do not contain
+grep -v "bin" /etc/passwd
+
+-v: This option tells grep to invert the match, meaning it will display all lines that do not match the specified pattern.
+
 
 
 
