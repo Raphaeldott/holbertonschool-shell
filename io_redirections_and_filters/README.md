@@ -57,6 +57,11 @@ grep: This command searches for patterns in files.
 "bin": This is the pattern you're searching for.
 /etc/passwd: This is the file being searched
 
+ex 16 add trailing
+grep -A 3 "root" /etc/passwd
+
+-A 3: This option tells grep to display 3 lines of trailing context after each
+
 
 
 
