@@ -72,6 +72,10 @@ grep '^[a-zA-Z]' /etc/ssh/sshd_config
 
 '^[a-zA-Z]': This is the regular expression used to match lines starting with a letter.
 
+ex 19 replace letters
+tr 'Ac' 'Ze'
+replace 'Ac' to 'Ze'
+
 
 
 
