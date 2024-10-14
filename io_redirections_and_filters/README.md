@@ -76,6 +76,11 @@ ex 19 replace letters
 tr 'Ac' 'Ze'
 replace 'Ac' to 'Ze'
 
+ex 20 remove letters
+tr -d 'cC'
+
+-d delete occurence
+
 
 
 
