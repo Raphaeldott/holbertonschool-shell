@@ -41,3 +41,10 @@ sort | uniq -u
 
 sort: This command sorts the input words alphabetically.
 uniq -u: The uniq command filters out repeated lines. The -u option specifically outputs only the lines that are unique
+
+ex 14 find a pattern
+grep "root" /etc/passwd
+
+grep: This command searches for patterns in files.
+"root": This is the pattern you're searching for. In this case, it looks for the string "root".
+/etc/passwd: This is the file in which you're searching for the pattern.
