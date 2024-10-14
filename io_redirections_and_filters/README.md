@@ -84,6 +84,14 @@ tr -d 'cC'
 ex 21 reverse input
 rev
 
+ex 22 delimiters
+cat /etc/passwd | cut -d: -f1,6 | sort
+
+cat /etc/passwd: This command reads the contents of the /etc/passwd file.
+cut -d: -f1,6: This command:
+-d:: Specifies : as the delimiter.
+-f1,6: Selects the first and sixth fields (username and home directory).
+
 
 
 
