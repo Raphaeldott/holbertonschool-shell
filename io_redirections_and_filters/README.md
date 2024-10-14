@@ -81,6 +81,9 @@ tr -d 'cC'
 
 -d delete occurence
 
+ex 21 reverse input
+rev
+
 
 
 
