@@ -48,3 +48,18 @@ grep "root" /etc/passwd
 grep: This command searches for patterns in files.
 "root": This is the pattern you're searching for. In this case, it looks for the string "root".
 /etc/passwd: This is the file in which you're searching for the pattern.
+
+ex 15 count that word
+grep -c "bin" /etc/passwd
+
+grep: This command searches for patterns in files.
+-c: This option tells grep to count the number of matching lines instead of displaying them.
+"bin": This is the pattern you're searching for.
+/etc/passwd: This is the file being searched
+
+
+
+
+
+
+
