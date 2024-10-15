@@ -103,6 +103,18 @@ find . -empty: This part searches the current directory (.) and its subdirectori
 
 | rev: Finally, this reverses the result again, restoring the original file or directory names but now only displaying the last part of the path.
 
+ex 24 sorted by bytes , case insesitive 
+ find . -type f -name '''*.gif''' | rev | cut -d/ -f1 | cut -d . -f 2- | rev | LC_ALL=C sort -f
+
+find . -type f -name '*.gif': This finds all files with the .gif extension.
+| rev: Reverses the file paths so that the filename is at the front.
+cut -d '/' -f 1: Takes the first part of the reversed string, effectively getting the filename.
+cut -d '.' -f 2-: Removes the file extension (the .gif part) from the reversed filename.
+| rev: Reverses the result back to normal.
+| LC_ALL=C sort -f: Sorts the final output in a case-insensitive manner.
+
+
+
 
 
 
