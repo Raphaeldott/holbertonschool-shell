@@ -38,3 +38,15 @@ Purpose: Filters the output to include only lines that contain a forward slash (
 
 wc -l
 Purpose: Counts the number of lines in the input it receives
+
+ex 4 list global variables
+printenv
+
+ex 5 list local variables
+set
+
+
+
+
+
+
