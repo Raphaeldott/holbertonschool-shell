@@ -122,6 +122,36 @@ paste -s -d '': This combines all the extracted characters into a single line wi
 j'avais aussi essayé:    cut -c 1 | tr -d '\n'     mais impossible d'avoir \n a la fin 
 
 
+ex 26 display host or ip wich did the most request
+tail -n +2 | cut -d$'''	''' -f1 | sort --ignore-case | uniq -c | sort --ignore-case -nr | head -11 | rev  | cut -d''' ''' -f1 | rev
 
+tail -n +2:
+Skips the first line of the input, which is often a header in TSV (Tab-Separated Values) files.
+
+cut -d$''' ''' -f1:
+This command extracts the first field from each line, using a tab (\t) as the delimiter. The $''' ''' syntax is a way to specify a tab character in some shells, although using just cut -f 1 with default tab delimiter is simpler.
+
+sort --ignore-case: 
+Sorts the output from the previous step in ascending order, ignoring case differences (so "apple" and "Apple" would be treated the same).
+
+uniq -c:  
+Counts the occurrences of each unique line (in this case, unique first fields) and prefixes each line with the count.
+
+sort --ignore-case -nr:  
+Sorts the counted output in numeric order (-n) and in reverse (-r), again ignoring case. This puts the most frequently occurring items at the top.
+
+head -11: 
+Takes the top 11 lines from the sorted output, which represent the most common hosts or IPs.
+
+rev: 
+Reverses the order of characters in each line of the input. For example, edams.ksc.nasa.gov becomes vog.asa.ncs.made.
+
+cut -d''' ''' -f1: 
+Extracts the first field from the reversed lines. After reversing, the first field will be the count, but this part may need clarification because it seems there's a syntax issue with the quotes. It should look like cut -d' ' -f1 to extract the first field correctly.
+
+rev:  Finally, it reverses the characters of the counts back to their original order.
+
+at first ive tried cat nasa_19950801.tsv | tail -n +2 | cut -f 1 | sort | uniq -c | sort -rnk 1 | head -n 11
+but i couldn't remove the request's count
 
 
