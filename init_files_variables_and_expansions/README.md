@@ -24,3 +24,17 @@ This refers to the current value of the PATH variable. The use of quotes ensures
 
 This adds the directory /action to the end of the PATH. The colon (:) is the separator between directories in the PATH variable. By placing /action after "$PATH", you ensure that the shell will look in /action after checking all the other directories already listed in PATH.
 
+ex 3 count directories in the path
+echo $PATH | tr : $'\n' | grep / | wc -l
+
+echo $PATH
+Purpose: Outputs the value of the PATH environment variable.
+
+tr : $'\n'
+Purpose: Translates (or replaces) colons (:) in the output with newline characters (\n).
+
+grep /
+Purpose: Filters the output to include only lines that contain a forward slash (/).
+
+wc -l
+Purpose: Counts the number of lines in the input it receives
