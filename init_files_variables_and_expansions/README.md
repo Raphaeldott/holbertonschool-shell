@@ -45,7 +45,9 @@ printenv
 ex 5 list local variables
 set
 
-
+ex 6 create local variable
+BEST="School"
+like declaring a variable in C
 
 
 
