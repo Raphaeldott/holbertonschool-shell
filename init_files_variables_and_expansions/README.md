@@ -49,6 +49,13 @@ ex 6 create local variable
 BEST="School"
 like declaring a variable in C
 
+ex 7 create global variable
+export BEST="School"
+
+ex 8 addition with variables
+echo $((128 + TRUEKNOWLEDGE))
+
+
 
 
 
