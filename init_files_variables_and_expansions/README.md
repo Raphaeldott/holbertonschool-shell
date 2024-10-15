@@ -55,6 +55,12 @@ export BEST="School"
 ex 8 addition with variables
 echo $((128 + TRUEKNOWLEDGE))
 
+ex 9 division
+$((5/2))
+
+ex 10 puissances
+$((5**2))
+
 
 
 

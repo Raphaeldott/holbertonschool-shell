@@ -1,0 +1,2 @@
+#!/bin/bash
+decimal=$(echo -e "ibase=2\n$BINARY" | bc)
