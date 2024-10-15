@@ -92,7 +92,16 @@ cut -d: -f1,6: This command:
 -d:: Specifies : as the delimiter.
 -f1,6: Selects the first and sixth fields (username and home directory).
 
+ex 23 empty casks
+find . -empty | rev | cut -d '/' -f 1 | rev
 
+find . -empty: This part searches the current directory (.) and its subdirectories for empty files and directories.
+
+| rev: This takes the output of the find command and reverses each line of text.
+
+| cut -d '/' -f 1: This takes the reversed lines and cuts them at the / delimiter, selecting the first field (which is now the last part of the original path due to the reversal).
+
+| rev: Finally, this reverses the result again, restoring the original file or directory names but now only displaying the last part of the path.
 
 
 
