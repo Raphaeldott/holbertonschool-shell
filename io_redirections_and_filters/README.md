@@ -113,7 +113,13 @@ cut -d '.' -f 2-: Removes the file extension (the .gif part) from the reversed f
 | rev: Reverses the result back to normal.
 | LC_ALL=C sort -f: Sorts the final output in a case-insensitive manner.
 
+ex 25 acrostic
+cut -c 1 | paste -s -d ''
 
+cut -c 1 input.txt: This extracts the first character from each line in input.txt.
+paste -s -d '': This combines all the extracted characters into a single line without any delimiter.
+
+j'avais aussi essayé:    cut -c 1 | tr -d '\n'     mais impossible d'avoir \n a la fin 
 
 
 
