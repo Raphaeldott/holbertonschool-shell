@@ -90,4 +90,9 @@ f: Stands for "floating point", indicating that the value being formatted is a d
 \n: This is a newline character, ensuring that the output ends with a new line.
 "$NUM": This is a variable that holds the value you want to format. The double quotes around $NUM ensure that it is treated as a single argument, even if it contains spaces or special characters.
 
+ex 14 decimal to hexadecimal
+printf "%x\n" "$DECIMAL"
+
+This line uses printf to format the output. %x converts the number from decimal to hexadecimal, and \n adds a newline at the end.
+
 
