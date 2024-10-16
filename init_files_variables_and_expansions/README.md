@@ -61,7 +61,33 @@ $((5/2))
 ex 10 puissances
 $((5**2))
 
+ex 11 base 2  to base 10
+echo $((2#$BINARY))
 
+$((...))
+What it is: This is a form of arithmetic expansion in Bash.
+Purpose: It evaluates the arithmetic expression inside the parentheses and returns the result.
+ 2#$BINARY
+2#: This prefix indicates that the number following it is in base 2 (binary). In Bash, you can specify the base of a number using this syntax: base#number.
+$BINARY: This is a variable that is expected to contain a binary number (a string of 0s and 1s).
 
+ex 12 combination aa zz without oo
+echo {a..z}{a..z} | tr ' ' '\n' | grep -v oo
+
+tr ' ' '\n':
+tr is a command that translates or deletes characters.
+In this case, it replaces spaces (' ') in the output from the previous command with newline characters ('\n').
+grep -v: This command filters the input.
+The -v option inverts the match, meaning it will exclude lines that match the specified pattern.
+oo: This is the pattern to exclude
+
+ex 13 write with two decimal places
+printf "%.2f\n" "$NUM"
+
+%: A placeholder that indicates where to insert a value.
+.2: This specifies that you want to display the number with two decimal places.
+f: Stands for "floating point", indicating that the value being formatted is a decimal number.
+\n: This is a newline character, ensuring that the output ends with a new line.
+"$NUM": This is a variable that holds the value you want to format. The double quotes around $NUM ensure that it is treated as a single argument, even if it contains spaces or special characters.
 
 
